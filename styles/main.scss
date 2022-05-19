@@ -1,0 +1,106 @@
+:root {
+  --default-transition: all ease-in-out 150ms;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  cursor: default;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12pt;
+}
+
+a[href], button {
+  cursor: pointer;
+}
+
+input, textarea {
+  cursor: text;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+button {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: var(--default-transition) !important;
+  opacity: 1;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+form {
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid lightgray;
+
+  label, input, button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  label {
+    font-weight: 500;
+  }
+
+  input {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 5px 15px;
+    transition: var(--default-transition);
+    outline: 2px solid transparent;
+
+    &:hover {
+      border-color: gray;
+    }
+
+    &:focus, &:active {
+      outline: 2px solid blue;
+    }
+  }
+}
+
+.centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-with-label {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  input {
+    width: 60%;
+  }
+}
+
+.login-button {
+  margin: 40px auto 0;
+  display: block;
+}
